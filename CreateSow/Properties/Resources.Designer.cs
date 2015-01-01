@@ -124,6 +124,33 @@ namespace CreateSowNamespace.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IMcVeigh@trakm8.com.
+        /// </summary>
+        internal static string recipient1 {
+            get {
+                return ResourceManager.GetString("recipient1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to jsmith@trakm8.com.
+        /// </summary>
+        internal static string recipient2 {
+            get {
+                return ResourceManager.GetString("recipient2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to jgreen@trakm8.com.
+        /// </summary>
+        internal static string recipient3 {
+            get {
+                return ResourceManager.GetString("recipient3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C:\N\QA\Quotations\FunctionalSpecRegister.csv.
         /// </summary>
         internal static string RegisterLocation {

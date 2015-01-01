@@ -39,6 +39,9 @@ namespace CreateSowNamespace
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Property to determine if the Project due time is acceptable
+        /// </summary>
         bool dateTimeAcceptable 
         {  
             get 
@@ -104,8 +107,7 @@ namespace CreateSowNamespace
 
         /// <summary>
         /// Function used in renaming a directory
-        /// 
-        /// when copied to the 
+        /// Replaces the defined token with the defined specific name 
         /// </summary>
         /// <param name="destinationDir">The Name of the Template Directory</param>
         /// <param name="name">Name to insert in Directory Name</param>
@@ -118,7 +120,7 @@ namespace CreateSowNamespace
         }
 
         /// <summary>
-        /// 
+        /// Create a directory name befitting the new project 
         /// </summary>
         /// <param name="customer"></param>
         /// <param name="title"></param>
@@ -196,7 +198,7 @@ namespace CreateSowNamespace
         }
 
         /// <summary>
-        /// Function that is called if the text box for "Project Titlke" is changed 
+        /// Function that is called if the text box for "Project Title" is changed 
         /// Reset the ability to create a new Statement of work 
         /// </summary>
         /// <param name="sender">Text Box Id</param>
@@ -218,12 +220,22 @@ namespace CreateSowNamespace
             this.bCreateSow.Enabled = true;
         }
 
+        /// <summary>
+        /// Actions on the change of the Project description 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void projectDescriptionTextBox_TextChanged(object sender, EventArgs e)
         {
             this.shortProjectDescription = ((TextBox)sender).Text;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Actions on the Setting of a date using the Date Picker
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dueDate = this.dateTimePicker1.Value;
             dateTimePickerSet = true; 

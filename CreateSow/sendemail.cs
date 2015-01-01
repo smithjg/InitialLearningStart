@@ -53,7 +53,9 @@ namespace CreateSowNamespace
             {
                 var mail = new MailMessage();
                 mail.From = new MailAddress(textFromGmail);
-                mail.To.Add("darius_jedburg@hotmail.com"); /// << get from the config 
+                mail.To.Add(Properties.Resources.recipient1); 
+                mail.To.Add(Properties.Resources.recipient2); 
+                mail.To.Add(Properties.Resources.recipient3); 
                 mail.Subject = "A New Statement of work Template number "+ fsNumber+" has been created";
                 mail.IsBodyHtml = true;
                 mail.Body = htmlBody;
