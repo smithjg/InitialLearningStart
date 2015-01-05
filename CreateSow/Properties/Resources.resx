@@ -122,7 +122,7 @@
     <comment>Token to use in replacement </comment>
   </data>
   <data name="DEST_DIR" xml:space="preserve">
-    <value>C:\N\QA\Quotations\F xxxx %Customer% %Title%</value>
+    <value>c:\N\QA\Quotations\F xxxx %Customer% %Title%</value>
     <comment>The place to put the new SOW</comment>
   </data>
   <data name="emailPassword" xml:space="preserve">
@@ -141,15 +141,15 @@
     <value>F xxxx</value>
   </data>
   <data name="HeaderLine" xml:space="preserve">
-    <value>FS xxx ,  Client Name , Project Title , Short Project Description , Expected Date completion,</value>
+    <value>FS xxxx ,  Client Name , Project Title , Short Project Description , Project Originator,Expected Date completion,</value>
     <comment>Header line for theCSV</comment>
   </data>
   <data name="RegisterLocation" xml:space="preserve">
-    <value>C:\N\QA\Quotations\FunctionalSpecRegister.csv</value>
+    <value>c:\N\QA\Quotations\Feature Directory.csv</value>
     <comment>location of the register</comment>
   </data>
   <data name="SOURCE_DIR" xml:space="preserve">
-    <value>C:\N\QA\Quotations\zTemplate\F xxxx %Customer% %Title%</value>
+    <value>c:\N\QA\Quotations\zTemplate\F xxxx %Customer% %Title%</value>
     <comment>The Current Location of the Template</comment>
   </data>
   <data name="Title" xml:space="preserve">
@@ -157,15 +157,18 @@
     <comment>Token to replace for the Title </comment>
   </data>
   <data name="recipient1" xml:space="preserve">
-    <value>IMcVeigh@trakm8.com</value>
-    <comment>Ian</comment>
+    <value>jsmith@trakm8.com</value>
+    <comment>Ian IMcVeigh@trakm8.com</comment>
   </data>
   <data name="recipient2" xml:space="preserve">
     <value>jsmith@trakm8.com</value>
-    <comment>Me</comment>
+    <comment>Mejsmith@trakm8.com</comment>
   </data>
   <data name="recipient3" xml:space="preserve">
-    <value>jgreen@trakm8.com</value>
-    <comment>Jon</comment>
+    <value>jsmith@trakm8.com</value>
+    <comment>Jon jgreen@trakm8.com</comment>
+  </data>
+  <data name="FunctionalSpecPrefix" xml:space="preserve">
+    <value>FS_</value>
   </data>
 </root>

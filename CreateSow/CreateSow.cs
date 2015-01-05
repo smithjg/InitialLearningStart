@@ -27,6 +27,7 @@ namespace CreateSowNamespace
         string FSNumber = Properties.Resources.FSNumberToken;
         string Title = Properties.Resources.Title;
         string shortProjectDescription = "Default as none provided";
+        string projectOriginator = string.Empty;
         DateTime dueDate = DateTime.Now;
         bool dateTimePickerSet = false;
         const string errorString = "Source directory does not exist or could not be found: ";
@@ -37,16 +38,18 @@ namespace CreateSowNamespace
         public CreateSow()
         {
             InitializeComponent();
+            dateTimePicker1.Value = DateTime.Now.AddDays(10);
         }
 
         /// <summary>
         /// Property to determine if the Project due time is acceptable
+        /// The due date needs to have been set and be longer than 10 days hence.
         /// </summary>
         bool dateTimeAcceptable 
         {  
             get 
             {
-                bool retval = (this.dateTimePickerSet == true) && (dueDate > DateTime.Now.AddDays(5));
+                bool retval = (this.dateTimePickerSet == true) && (dueDate > DateTime.Now.AddDays(10));
                 return retval ; 
             }  
         }
@@ -75,7 +78,7 @@ namespace CreateSowNamespace
 
                     // create a default file record updater 
                     FileRecordUpdate fileRecordUpdate = new FileRecordUpdate(string.Empty);
-                    this.fsNumbertextbox.Text = fileRecordUpdate.update(customer, title, shortProjectDescription, dueDate);
+                    this.fsNumbertextbox.Text = fileRecordUpdate.update(customer, title, shortProjectDescription, projectOriginator,dueDate);
 
                     string customerTitle = givenCustomerAndTitleReturnDirectoryName(customer, title, this.fsNumbertextbox.Text);
 
@@ -193,8 +196,7 @@ namespace CreateSowNamespace
         /// <param name="e">not used </param>
         void Form1_Load(object sender, EventArgs e)
         {
-            // Enable the SoW create Button
-            this.bCreateSow.Enabled = true;
+            this.resetScreen();
         }
 
         /// <summary>
@@ -205,7 +207,7 @@ namespace CreateSowNamespace
         /// <param name="e">not used </param>
         void textBoxProjectTitle_TextChanged(object sender, EventArgs e)
         {
-            this.bCreateSow.Enabled = true;
+            this.resetScreen();
         }
 
         /// <summary>
@@ -216,8 +218,6 @@ namespace CreateSowNamespace
         /// <param name="e">not used </param>
         void textBoxCustomer_TextChanged(object sender, EventArgs e)
         {
-            // Re enable the Button to create A new Satatement of work 
-            this.bCreateSow.Enabled = true;
         }
 
         /// <summary>
@@ -239,6 +239,22 @@ namespace CreateSowNamespace
         {
             dueDate = this.dateTimePicker1.Value;
             dateTimePickerSet = true; 
+        }
+
+        void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            this.projectOriginator = ((TextBox)sender).Text;
+        }
+
+        void resetScreen()
+        {
+            // Enable the SoW create Button
+            this.bCreateSow.Enabled = true;
+            this.textBoxCustomer.Text = "Trakm8";
+            this.projectDescriptionTextBox.Text = string.Empty;
+            this.originatorTextBox.Text = string.Empty;
+            dateTimePicker1.Value = DateTime.Now.AddDays(10);
+            this.dateTimePickerSet = false;
         }
     }
 }

@@ -70,7 +70,7 @@ namespace CreateSowNamespace.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\N\QA\Quotations\F xxxx %Customer% %Title%.
+        ///   Looks up a localized string similar to c:\N\QA\Quotations\F xxxx %Customer% %Title%.
         /// </summary>
         internal static string DEST_DIR {
             get {
@@ -115,7 +115,16 @@ namespace CreateSowNamespace.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FS xxx ,  Client Name , Project Title , Short Project Description , Expected Date completion,.
+        ///   Looks up a localized string similar to FS_.
+        /// </summary>
+        internal static string FunctionalSpecPrefix {
+            get {
+                return ResourceManager.GetString("FunctionalSpecPrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FS xxxx ,  Client Name , Project Title , Short Project Description , Project Originator,Expected Date completion,.
         /// </summary>
         internal static string HeaderLine {
             get {
@@ -124,7 +133,7 @@ namespace CreateSowNamespace.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to IMcVeigh@trakm8.com.
+        ///   Looks up a localized string similar to jsmith@trakm8.com.
         /// </summary>
         internal static string recipient1 {
             get {
@@ -142,7 +151,7 @@ namespace CreateSowNamespace.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to jgreen@trakm8.com.
+        ///   Looks up a localized string similar to jsmith@trakm8.com.
         /// </summary>
         internal static string recipient3 {
             get {
@@ -151,7 +160,7 @@ namespace CreateSowNamespace.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\N\QA\Quotations\FunctionalSpecRegister.csv.
+        ///   Looks up a localized string similar to c:\N\QA\Quotations\Feature Directory.csv.
         /// </summary>
         internal static string RegisterLocation {
             get {
@@ -160,7 +169,7 @@ namespace CreateSowNamespace.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\N\QA\Quotations\zTemplate\F xxxx %Customer% %Title%.
+        ///   Looks up a localized string similar to c:\N\QA\Quotations\zTemplate\F xxxx %Customer% %Title%.
         /// </summary>
         internal static string SOURCE_DIR {
             get {

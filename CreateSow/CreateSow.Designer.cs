@@ -44,6 +44,8 @@
             this.FunctionalSpecNumberLabel = new System.Windows.Forms.Label();
             this.fsNumbertextbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.projectOriginatorLabel = new System.Windows.Forms.Label();
+            this.originatorTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,7 +156,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(10, 93);
+            this.dateTimePicker1.Location = new System.Drawing.Point(10, 153);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 16;
@@ -163,16 +165,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 77);
+            this.label4.Location = new System.Drawing.Point(7, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 13);
+            this.label4.Size = new System.Drawing.Size(317, 13);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Project Expected Due Date";
+            this.label4.Text = "Project Expected Due Date, At least 10 days beyond todays date ";
             // 
             // FunctionalSpecNumberLabel
             // 
             this.FunctionalSpecNumberLabel.AutoSize = true;
-            this.FunctionalSpecNumberLabel.Location = new System.Drawing.Point(21, 384);
+            this.FunctionalSpecNumberLabel.Location = new System.Drawing.Point(12, 432);
             this.FunctionalSpecNumberLabel.Name = "FunctionalSpecNumberLabel";
             this.FunctionalSpecNumberLabel.Size = new System.Drawing.Size(171, 13);
             this.FunctionalSpecNumberLabel.TabIndex = 19;
@@ -180,7 +182,7 @@
             // 
             // fsNumbertextbox
             // 
-            this.fsNumbertextbox.Location = new System.Drawing.Point(198, 381);
+            this.fsNumbertextbox.Location = new System.Drawing.Point(189, 429);
             this.fsNumbertextbox.Name = "fsNumbertextbox";
             this.fsNumbertextbox.ReadOnly = true;
             this.fsNumbertextbox.Size = new System.Drawing.Size(99, 20);
@@ -189,19 +191,40 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.originatorTextBox);
+            this.panel1.Controls.Add(this.projectOriginatorLabel);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.bCreateSow);
             this.panel1.Location = new System.Drawing.Point(12, 218);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(572, 137);
+            this.panel1.Size = new System.Drawing.Size(572, 192);
             this.panel1.TabIndex = 20;
+            // 
+            // projectOriginatorLabel
+            // 
+            this.projectOriginatorLabel.AutoSize = true;
+            this.projectOriginatorLabel.Location = new System.Drawing.Point(7, 79);
+            this.projectOriginatorLabel.Name = "projectOriginatorLabel";
+            this.projectOriginatorLabel.Size = new System.Drawing.Size(88, 13);
+            this.projectOriginatorLabel.TabIndex = 19;
+            this.projectOriginatorLabel.Text = "Project Originator";
+            // 
+            // originatorTextBox
+            // 
+            this.originatorTextBox.Location = new System.Drawing.Point(10, 97);
+            this.originatorTextBox.Multiline = true;
+            this.originatorTextBox.Name = "originatorTextBox";
+            this.originatorTextBox.Size = new System.Drawing.Size(228, 20);
+            this.originatorTextBox.TabIndex = 20;
+            this.originatorTextBox.Text = "If known enter originator";
+            this.originatorTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // CreateSow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 416);
+            this.ClientSize = new System.Drawing.Size(596, 469);
             this.Controls.Add(this.FunctionalSpecNumberLabel);
             this.Controls.Add(this.fsNumbertextbox);
             this.Controls.Add(this.label3);
@@ -243,6 +266,8 @@
         private System.Windows.Forms.Label FunctionalSpecNumberLabel;
         private System.Windows.Forms.TextBox fsNumbertextbox;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox originatorTextBox;
+        private System.Windows.Forms.Label projectOriginatorLabel;
     }
 }
 
